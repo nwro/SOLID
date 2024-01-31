@@ -29,6 +29,12 @@ void UserInterface::run()
                     case EXIT:
                         exit(0);
                         break;
+                    case CREATE_DIR:
+                        fileManager.createDirectory();
+                        break;
+                    case CREATE_FILE:
+                        fileManager.createFile(getLines());
+                        break;
                     default:
                         break;
                 }

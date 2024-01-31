@@ -4,15 +4,19 @@
 class FileManager
 {
 public:
+    void createFile(const std::string& text);
+    void createDirectory();
     void overwrite(const std::string& text);
     void append(const std::string& text);
     void remove();
     std::string read();
-    void applyFilepath(const std::string& filepath);
 
+    void applyFilepath(const std::string& filepath);
 private:
-    bool doesFileExist(const std::string& path);
     void throwExceptionIfFileDoesntExist(const std::string& path);
-    std::string filepath;
-    std::string text;
+    void throwExceptionIfFileExists(const std::string& path);
+    void throwExceptionIfDirectoryExists(const std::string& path);
+    bool doesFileExist(const std::string& path);
+    bool doesDirectoryExist(const std::string& path);
+    std::string path;
 };

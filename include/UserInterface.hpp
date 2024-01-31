@@ -10,6 +10,8 @@ enum Action
     APPEND,
     READ,
     REMOVE,
+    CREATE_FILE,
+    CREATE_DIR,
     ActionCOUNT
 };
 
@@ -35,4 +37,6 @@ const std::string commands =
     "2. Write to file\n"
     "3. Append file\n" 
     "4. Read file\n"
-    "5. Remove file\n"; 
+    "5. Remove file\n"
+    "6. Create file\n"
+    "7. Create directory\n";
